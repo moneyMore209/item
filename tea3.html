@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tea</title>
+    <link href="北苑大酒店/css/index.css" rel="stylesheet">
+    <script src="北苑大酒店/js/jquery-3.1.0.js"></script>
+    <script src="北苑大酒店/js/style.js"></script>
+
+</head>
+<body style="background: #190d07">
+<div class="page_2">
+    <h3>餐饮美食</h3>
+    <div class="left"><a href="tea.html"> < </a> </div>
+    <div class="right right_b"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+    <div class="right_box ">
+        <div class="right right_r"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+        <ul>
+            <li><a href="index.html" >首页</a></li>
+            <li><a href="recreation.html" >康体娱乐</a></li>
+            <li><a href="room.html" >舒适客房</a></li>
+            <li><a href="food.html" >餐饮美食</a></li>
+            <li><a href="#" >会议会展</a></li>
+            <li><a href="#" >商务办公</a></li>
+        </ul>
+    </div>
+
+    <div id="wrapper">
+        <div id="banner"><!-- 轮播部分 -->
+            <ul class="imgList">
+                <li><a href="#"><img src="北苑大酒店/images/food1.png" width="980px" height="502px" alt="puss in boots1"></a></li>
+                <li><a href="#"><img src="北苑大酒店/images/food2.png" width="980px" height="502px" alt="puss in boots2"></a></li>
+                <li><a href="#"><img src="北苑大酒店/images/food3.png"  width="980px" height="502px" alt="puss in boots3"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="txt">
+        <h3>冷餐</h3>
+        <p>你需要的是一份有情怀的美食
+            湘，本心所在，热情火辣
+            粤，味随季变，情在菜中
+            甘鲜醇厚尽在舌尖
+            一馐一馔无不包容湘情粤意
+        </p>
+        <h6>地点：酒店1层 自助餐厅</h6>
+        <h5>   营业时间：<br>
+            午餐:10:30-14:30<br>
+            晚餐:15:30-22:00</h5>
+    </div>
+    <button class="btn" type="button">立即预定</button>
+    <div id="pho" style="display: none">
+        <div class="pho_box">
+            <p class="p">010-84832266</p>
+            <div class="left">取消</div>
+            <div class="right">确定</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var curIndex = 0, //当前index
+            imgLen = $(".imgList li").length; //图片总数
+    // 定时器自动变换2.5秒每次
+    var autoChange = setInterval(function(){
+        if(curIndex < imgLen-1){
+            curIndex ++;
+        }else{
+            curIndex = 0;
+        }
+        //调用变换处理函数
+        changeTo(curIndex);
+    },2500);
+
+    //清除定时器时候的重置定时器--封装
+    function autoChangeAgain(){
+        autoChange = setInterval(function(){
+            if(curIndex < imgLen-1){
+                curIndex ++;
+            }else{
+                curIndex = 0;
+            }
+            //调用变换处理函数
+            changeTo(curIndex);
+        },2500);
+    }
+    function changeTo(num){
+        var goLeft = num * 980;
+        $(".imgList").animate({left: "-" + goLeft + "px"},500);
+
+    }
+    $('.btn').on("click",function(){
+        $('#pho').show();
+    })
+    $(".left").on('click',function(){
+        $('#pho').hide()
+    })
+    $(".right").on('click',function(){
+        $('#pho').hide()
+    })
+    $(".right_b").on("click",function(){
+        $(".right_box").show();
+    })
+    $(".right_box").on("click",function(){
+        $(this).hide();
+    })
+</script>

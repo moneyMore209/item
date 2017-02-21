@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tea</title>
+    <link href="北苑大酒店/css/index.css" rel="stylesheet">
+    <script src="北苑大酒店/js/jquery-3.1.0.js"></script>
+    <script src="北苑大酒店/js/style.js"></script>
+
+</head>
+<body style="background: #190d07">
+<div class="page_2">
+    <h3>舒适客房</h3>
+    <div class="left"><a href="index.html"> < </a> </div>
+    <div class="right"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+    <div class="right_box ">
+        <div class="right right_r"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+        <ul>
+            <li><a href="index.html" >首页</a></li>
+            <li><a href="recreation.html" >康体娱乐</a></li>
+            <li><a href="room.html" >舒适客房</a></li>
+            <li><a href="food.html" >餐饮美食</a></li>
+            <li><a href="#" >会议会展</a></li>
+            <li><a href="#" >商务办公</a></li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div id="banner"><!-- 轮播部分 -->
+            <ul class="imgList">
+                <li><a href="#"><img src="北苑大酒店/images/rooms_pic7.png" width="980px" height="502px" alt="puss in boots1"></a></li>
+                <li><a href="#"><img src="北苑大酒店/images/rooms_pic2.png" width="980px" height="502px" alt="puss in boots2"></a></li>
+                <li><a href="#"><img src="北苑大酒店/images/rooms_pic3.png"  width="980px" height="502px" alt="puss in boots3"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="txt">
+        <h3>精品特色房</h3>
+        <p style="width: 590px;">客房设施齐全、舒适房间色调柔和，充满东方古典韵味<br>
+
+            设有步入式衣帽间，休息区与工作区<br>
+            提供全方位的至尊享受。
+        </p>
+       <ul style="list-style: disc;  margin-left: 6%;color: #fff;font-family: 'Adobe 黑体 Std R';font-size: 24px;text-align: center">
+
+
+           <li>液晶屏幕电视</li>
+           <li>宽带网线接入 高速无线上网</li>
+           <li>迷你酒吧</li>
+           <li>全套豪华卫浴用品</li>
+           <li>宽敞豪华的大理石浴室</li>
+           <li>步入式衣帽间</li>
+           <li>中央空调系统</li>
+           <li>电子密码保险柜</li>
+           <li>免费瓶装水</li>
+
+       </ul>
+    </div>
+    <button class="btn" type="button">立即预定</button>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var curIndex = 0, //当前index
+            imgLen = $(".imgList li").length; //图片总数
+    // 定时器自动变换2.5秒每次
+    var autoChange = setInterval(function(){
+        if(curIndex < imgLen-1){
+            curIndex ++;
+        }else{
+            curIndex = 0;
+        }
+        //调用变换处理函数
+        changeTo(curIndex);
+    },2500);
+
+    //清除定时器时候的重置定时器--封装
+    function autoChangeAgain(){
+        autoChange = setInterval(function(){
+            if(curIndex < imgLen-1){
+                curIndex ++;
+            }else{
+                curIndex = 0;
+            }
+            //调用变换处理函数
+            changeTo(curIndex);
+        },2500);
+    }
+    function changeTo(num){
+        var goLeft = num * 980;
+        $(".imgList").animate({left: "-" + goLeft + "px"},500);
+
+    }
+    $(".right").on("click",function(){
+        $(".right_box").show();
+    })
+    $(".right_box").on("click",function(){
+        $(this).hide();
+    })
+
+</script>

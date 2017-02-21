@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tea</title>
+    <link href="北苑大酒店/css/index.css" rel="stylesheet">
+    <script src="北苑大酒店/js/jquery-3.1.0.js"></script>
+    <script src="北苑大酒店/js/style.js"></script>
+
+</head>
+<body >
+<div class="page_2">
+    <h3>康体娱乐</h3>
+    <div class="left"><a href="recreation1.html"> < </a> </div>
+    <div class="right"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+    <div class="right_box ">
+        <div class="right right_r"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+        <ul>
+            <li><a href="index.html" >首页</a></li>
+            <li><a href="recreation.html" >康体娱乐</a></li>
+            <li><a href="room.html" >舒适客房</a></li>
+            <li><a href="food.html" >餐饮美食</a></li>
+            <li><a href="#" >会议会展</a></li>
+            <li><a href="#" >商务办公</a></li>
+        </ul>
+    </div>    <ul>
+        <li>
+            <i class="mig">
+                <img src="北苑大酒店/images/re1.png" class="img_1">
+                <div class="mask masks">
+                    <p>北苑大酒店温泉水疗中心占地2万㎡，<br>
+                        拥有京城北部独具特色的露天温泉，<br>
+                        使用地下深采温泉水源。<br>
+                        极致个性化的服务理念与全球流行的娱乐休闲方式结合</p>
+                </div>
+            </i>
+
+        </li>
+        <li>
+            <i class="mig">
+                <h6>北苑温泉</h6>
+
+                <img src="北苑大酒店/images/re2.png" class="img_1">
+                <a href="recreation1.html"> <div class="mask">
+                    <p>北苑大酒店温泉水疗中心占地2万㎡，<br>
+                        拥有京城北部独具特色的露天温泉，<br>
+                        使用地下深采温泉水源。<br>
+                        极致个性化的服务理念与全球流行的娱乐休闲方式结合</p>
+                </div></a>
+            </i>
+
+        </li>
+        <li>
+            <i class="mig">
+                <h6>北苑健身</h6>
+
+                <img src="北苑大酒店/images/re3.png" class="img_1">
+                <a href="recreation2.html"> <div class="mask">
+                    <p>北苑大酒店温泉水疗中心占地2万㎡，<br>
+                        拥有京城北部独具特色的露天温泉，<br>
+                        使用地下深采温泉水源。<br>
+                        极致个性化的服务理念与全球流行的娱乐休闲方式结合</p>
+                </div></a>
+            </i>
+
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
+<script>
+    $(".right").on("click",function(){
+        $(".right_box").show();
+    })
+    $(".right_box").on("click",function(){
+        $(this).hide();
+    })
+</script>

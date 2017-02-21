@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="北苑大酒店/css/index.css">
+    <link rel="stylesheet" href="北苑大酒店/css/idangerous.swiper.css">
+    <script src="北苑大酒店/js/jquery-3.1.0.js"></script>
+    <script src="北苑大酒店/js/idangerous.swiper.min.js"></script>
+    <style>
+        /* Demo Syles */
+
+        .device {
+            width: 640px;
+            height: 300px;
+            padding: 30px 40px;
+            border-radius: 20px;
+            margin: 5px auto;
+            position: relative;
+
+        }
+        .device .arrow-left {
+
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+        }
+        .device .arrow-right {
+
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -15px;
+            width: 17px;
+            height: 30px;
+        }
+        .swiper-container {
+            height: 755px;
+            width: 640px;
+            margin-top: 100px;;
+        }
+        .content-slide {
+            padding: 20px;
+            color: #fff;
+        }
+        .title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .pagination {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            bottom:5px;
+            width: 100%;
+        }
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #999;
+            box-shadow: 0px 1px 2px #555 inset;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+        #swiper-wrapper{
+            height:530px ;
+        }
+    </style>
+</head>
+<body>
+<div class="page_2">
+    <h3>会议会展</h3>
+    <div class="left"><a href="index.html"> < </a> </div>
+    <div class="right"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+    <div class="right_box ">
+        <div class="right right_r"><a href="javascript:;"><img src="北苑大酒店/images/nav.png"> </a> </div>
+        <ul>
+            <li><a href="index.html" >首页</a></li>
+            <li><a href="recreation.html" >康体娱乐</a></li>
+            <li><a href="room.html" >舒适客房</a></li>
+            <li><a href="food.html" >餐饮美食</a></li>
+            <li><a href="#" >会议会展</a></li>
+            <li><a href="#" >商务办公</a></li>
+        </ul>
+    </div>
+    <div class="device">
+        <a class="arrow-left" href="#"></a>
+        <a class="arrow-right" href="#"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper" style="height: 530px;" id="swiper-wrapper">
+                <div class="swiper-slide"> <img src="北苑大酒店/images/one.png"> </div>
+                <div class="swiper-slide"> <img src="北苑大酒店/images/two.png"> </div>
+                <div class="swiper-slide"> <img src="北苑大酒店/images/three.png"> </div>
+
+
+            </div>
+        </div>
+        <div class="pagination"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        loop:true,
+        grabCursor: true,
+        paginationClickable: true
+    })
+    $('.arrow-left').on('click', function(e){
+        e.preventDefault()
+        mySwiper.swipePrev()
+    })
+    $('.arrow-right').on('click', function(e){
+        e.preventDefault()
+        mySwiper.swipeNext()
+    });
+    $(".right").on("click",function(){
+        $(".right_box").show();
+    })
+    $(".right_box").on("click",function(){
+        $(this).hide();
+    })
+</script>
